@@ -18,16 +18,12 @@ export class UserController implements OnModuleInit {
 
   @Post('user')
   createUser(@Body('user') user: any, @Body('data') data: any, ) {
-    console.log('post user ', user);
-    user.id = 'djcberdrehg'
-    console.log(user)
     return this.grpcService.createUser(user);
   }
 
 
   @Get('user/:id')
   getUser(@Param('id') id: any, @Req() req: any) {
-    console.log('Get user', { id });
     return this.grpcService.getUser({ id });
   }
 }
