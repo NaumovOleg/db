@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "google/protobuf/any.proto";
+package user;
+
+service UserController {
+  rpc createUser (UserData) returns (UserData);
+  rpc getUser (UserId) returns (UserData);
+}
+
+message UserData {
+   string name = 1;
+   string email = 2;
+   string password = 3;
+}
+
+message UserId {
+  string id = 1;
+}
