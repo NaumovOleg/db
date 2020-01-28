@@ -1,4 +1,4 @@
-import { Controller, Logger, Req, Param, Post, Get, Body, OnModuleInit } from '@nestjs/common';
+import { Controller, Logger, Req, Param, Post, Get, All, Body, OnModuleInit } from '@nestjs/common';
 import { UserGrpcService } from 'src/client/user/interfaces';
 import { Client, ClientGrpc } from '@nestjs/microservices';
 import { userGrpcClientOptions } from '../../options';
@@ -17,10 +17,9 @@ export class UserController implements OnModuleInit {
   }
 
   @Post('user')
-  createUser(@Body('user') user: any, @Body('data') data: any, ) {
+  createUser(@Body('user') user: any) {
     return this.grpcService.createUser(user);
   }
-
 
   @Get('user/:id')
   getUser(@Param('id') id: any, @Req() req: any) {
