@@ -1,6 +1,6 @@
 import { Controller, Logger } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
-import { MathService } from './math.service'
+import { UserService } from './user.service'
 
 export interface UserGrpcService {
   createUser(user: User): any;
@@ -21,7 +21,7 @@ export interface UserId {
 export class UserController {
   private logger = new Logger('UserController');
 
-  constructor(private mathService: MathService) { }
+  constructor(private userService: UserService) { }
 
   @GrpcMethod('UserController', 'getUser')
   getUser(id: UserId, metadata: any): User {
@@ -44,7 +44,7 @@ export class UserController {
     }
 
     return {
-      ...user, password: '' + this.mathService.count()
+      ...user, password: '' + this.userService.count()
     }
   }
 }

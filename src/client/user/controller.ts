@@ -1,5 +1,5 @@
 import { Controller, Logger, Req, Param, Post, Get, All, Body, OnModuleInit } from '@nestjs/common';
-import { UserGrpcService } from 'src/client/user/interfaces';
+import { UserGrpcService } from '../../interfaces/user';
 import { Client, ClientGrpc } from '@nestjs/microservices';
 import { userGrpcClientOptions } from '../../options';
 
