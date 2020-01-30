@@ -5,13 +5,13 @@ import { User } from '../../interfaces/user'
 
 @Injectable()
 export class UserService {
-    constructor(@InjectModel('User') private readonly catModel: Model<User>) { }
-    public accumulate(data: number[]): number {
-        return (data || []).reduce((a, b) => Number(a) + Number(b));
+    constructor(@InjectModel('User') private readonly userModel: Model<User>) { }
+    public getAllUSers(): number {
+        return this.userModel.find({})
     }
-    public count(): number {
-        let a = 0
 
-        return a
+    public createUser(user: User): Promise<User> {
+        let userSaves = new this.userModel(user);
+        return userSaves.save()
     }
 }

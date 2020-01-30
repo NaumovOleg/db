@@ -9,10 +9,12 @@ service UserController {
 
 message UserData {
    string name = 1;
-   string email = 2;
-   string password = 3;
-   string phone = 4;
-   string dob = 5;
+   string surname = 2;
+   string secondname = 3;
+   string email = 4;
+   string password = 5;
+   string phone = 6;
+   string dob = 7;
 }
 
 message UserId {

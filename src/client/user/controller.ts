@@ -17,7 +17,7 @@ export class UserController implements OnModuleInit {
   }
 
   @Post('user')
-  createUser(@Body('user') user: any) {
+  createUser(@Body() user: any) {
     return this.grpcService.createUser(user);
   }
 

@@ -7,6 +7,8 @@ export interface UserGrpcService {
 
 export interface User {
   name: string;
+  surname: string;
+  secondname: string;
   email: string;
   password: string;
 }
