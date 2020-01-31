@@ -4,19 +4,23 @@ package user;
 
 service UserController {
   rpc createUser (UserData) returns (UserData);
-  rpc getUser (UserId) returns (UserData);
+  rpc getUser (Param) returns (UserData);
 }
 
 message UserData {
-   string name = 1;
-   string surname = 2;
-   string secondname = 3;
-   string email = 4;
-   string password = 5;
-   string phone = 6;
-   string dob = 7;
+   optional string name = 1;
+   optional string surname = 2;
+   optional string secondname = 3;
+   optional string email = 4;
+   optional string password = 5;
+   optional string phone = 6;
+   optional string dob = 7;
 }
 
-message UserId {
-  string id = 1;
+message Param {
+  string param = 1;
+}
+
+message Email {
+  string email = 1;
 }
