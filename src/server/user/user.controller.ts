@@ -26,6 +26,6 @@ export class UserController {
   @GrpcMethod('UserController', 'getUser')
   async getUser(searchParam: SearchParam, metadata: any): Promise<User> {
     console.log('=========', searchParam)
-    return await this.userService.getUser(searchParam.param)
+    return this.userService.getUser(searchParam.param)
   }
 }

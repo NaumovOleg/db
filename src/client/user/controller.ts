@@ -15,7 +15,7 @@ export class UserController {
   }
 
   @Get('user/:id')
-  getUser(@Param('id') id: any, @Req() req: any) {
+  async getUser(@Param('id') id: any, @Req() req: any) {
     return this.userService.getUser(id);
   }
 }

@@ -4,7 +4,7 @@ package user;
 
 service UserController {
   rpc createUser (UserData) returns (UserData);
-  rpc getUser (Param) returns (UserData);
+  rpc getUser (Param) returns (Response);
 }
 
 message UserData {
@@ -15,6 +15,11 @@ message UserData {
    optional string password = 5;
    optional string phone = 6;
    optional string dob = 7;
+}
+
+message Response {
+    UserData data = 1;
+    google.protobuf.Any error = 2;
 }
 
 message Param {
