@@ -8,26 +8,25 @@ const UserSchema = new Schema({
   name: String,
   surname: String,
   secondname: String,
+  hashedPassword: String,
   email: {
     type: String,
     unique: true
   },
-  createdAt: Date,
+  createdAt: { type: Date, default: new Date() },
   roles: [],
 });
 
-UserSchema.virtual('hashedpassword').get(async function () {
-  let hashed = await hash(this.password, 10)
-  console.log('----------------', hashed)
-  return hashed
-});
+UserSchema.virtual('password')
+  .set(async function (password) {
+    this.hashedPassword = await hash(password, 10)
+  }).get(function () {
+    return this.hashedPassword
+  });
 
-UserSchema.pre('save', () => {
-  console.log('------,', this)
-})
 
 UserSchema.methods.comparePasswords = async (password): Promise<boolean> => {
-  return await compare(password, this.password)
+  return await compare(password, this.hashedPassword)
 };
 
 export { UserSchema }

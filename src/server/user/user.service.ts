@@ -10,8 +10,9 @@ export class UserService {
         return this.userModel.find({})
     }
 
-    public createUser(user: User): Promise<User> {
+    public async createUser(user: User): Promise<User> {
         let userSaves = new this.userModel(user);
         return userSaves.save()
     }
 }
+

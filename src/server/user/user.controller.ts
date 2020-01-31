@@ -36,7 +36,6 @@ export class UserController {
   async createUser(user: User, metadata: any): Promise<User> {
     console.log(user);
     let userData = await this.userService.createUser(user)
-    console.log(userData)
     return userData
   }
 }
