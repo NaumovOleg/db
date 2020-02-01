@@ -17,12 +17,12 @@ export class UserService implements OnModuleInit {
     this.grpcService = this.client.getService<UserGrpcService>('UserController');
   }
 
-  public getAllUSers() {
-
+  createUser(user) {
+    return this.grpcService.createUser(user);
   }
 
-  public async createUser(user) {
-    return this.grpcService.createUser(user);
+  login(logindata) {
+    return this.grpcService.login(logindata);
   }
 
   getUser(param) {

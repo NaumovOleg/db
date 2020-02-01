@@ -1,7 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpException, Catch } from '@nestjs/common';
 import { Model, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from '../../interfaces/user'
+import { RpcException } from '@nestjs/microservices';
 
 @Injectable()
 export class UserService {
@@ -10,27 +11,35 @@ export class UserService {
         return this.userModel.find({})
     }
 
-    public async createUser(user: User): Promise<User> {
-        let userSaves = new this.userModel(user);
-        return userSaves.save()
+    public login({ email, password }) {
+        console.log(email, password)
+        return { token: 'dcmofrjcnrjkcjkr' }
     }
 
-    public async getUser(param: String): Promise<any> {
-        const $or = [];
+    public async createUser(user: User): Promise<User> {
+        try {
+            return await this.userModel(user).save()
+        } catch (err) {
+            if (err.code) {
+                throw new RpcException({ message: 'This email already exists', code: 7 })
+            }
+            throw new RpcException({ message: err.message, code: 7 })
+        }
+    }
 
+    public async getUser(param: String): Promise<User> {
+        const $or = [];
         $or.push({ email: param })
         if (Types.ObjectId.isValid(param)) {
             $or.push({ _id: param })
         }
         try {
-            throw new Error('fffmff')
-            let data = await this.userModel.findOne({
+            let userData = await this.userModel.findOne({
                 $or
             })
-            console.log(data)
-            return { data, error: null }
+            return userData
         } catch (err) {
-            return err
+            throw new RpcException({ message: err.message })
         }
     }
 }

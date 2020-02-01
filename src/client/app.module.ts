@@ -1,8 +1,6 @@
-import { Module, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module'
-import { LoggerMiddleware } from './logger';
 import { RoutesModule } from './routers';
-import { HttpExceptionFilter } from './exception.filter'
 @Module({
   imports: [
     RoutesModule,
@@ -11,5 +9,5 @@ import { HttpExceptionFilter } from './exception.filter'
   controllers: [],
   providers: [],
 })
-export class AppModule {
+export class ClientAppModule {
 }

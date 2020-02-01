@@ -2,15 +2,7 @@ import { Controller, Logger } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
 import { UserService } from './user.service'
 import { User, SearchParam } from '../../interfaces/user'
-
-export interface UserGrpcService {
-  createUser(user: User): any;
-  getUser(user: UserId): any;
-}
-
-export interface UserId {
-  id: string;
-}
+import { UserGrpcService, LoginData, UserId } from '../../interfaces/user'
 
 @Controller()
 export class UserController {
@@ -20,12 +12,18 @@ export class UserController {
 
   @GrpcMethod('UserController', 'createUser')
   async createUser(user: User, metadata: any): Promise<User> {
-    return await this.userService.createUser(user)
+    return this.userService.createUser(user)
+  }
+
+  @GrpcMethod('UserController', 'login')
+  async login(loginData: LoginData, metadata: any): Promise<any> {
+    let resp = this.userService.login(loginData)
+    console.log('cmrjncjrkrj', resp)
+    return resp
   }
 
   @GrpcMethod('UserController', 'getUser')
   async getUser(searchParam: SearchParam, metadata: any): Promise<User> {
-    console.log('=========', searchParam)
     return this.userService.getUser(searchParam.param)
   }
 }

@@ -21,7 +21,8 @@ const Routers: Routes = [
 @Module({
   imports: [
     RouterModule.forRoutes(Routers),
-    UserModule],
+    UserModule
+  ],
   controllers: [],
   providers: [],
 })
