@@ -1,8 +1,9 @@
-import { Controller, Logger, Req, Param, Post, Get, All, Body, OnModuleInit } from '@nestjs/common';
+import { Controller, Logger, Req, Param, Post, Get, All, Body, OnModuleInit, UseFilters, HttpException } from '@nestjs/common';
 import { UserGrpcService } from '../../interfaces/user';
 import { Client, ClientGrpc } from '@nestjs/microservices';
 import { userGrpcClientOptions } from '../../options';
 import { UserService } from './user.service'
+import { HttpExceptionFilter } from '../exception.filter'
 
 @Controller()
 export class UserController {

@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { Model, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from '../../interfaces/user'
-// console.log(Types.ObjectId('ffff'))
 
 @Injectable()
 export class UserService {
@@ -27,7 +26,8 @@ export class UserService {
             throw new Error('fffmff')
             let data = await this.userModel.findOne({
                 $or
-            }) || {}
+            })
+            console.log(data)
             return { data, error: null }
         } catch (err) {
             return err
