@@ -1,6 +1,6 @@
 
 import { Schema, Model, model } from "mongoose";
-import { hash, compare } from 'bcrypt';
+import { hashSync, compareSync } from 'bcrypt';
 import { User } from '../../interfaces/user'
 
 
@@ -19,14 +19,16 @@ const UserSchema = new Schema({
 
 UserSchema.virtual('password')
   .set(async function (password) {
-    this.hashedPassword = await hash(password, 10)
+    let hashed = await hashSync(password, 10)
+    this.hashedPassword = hashed;
   }).get(function () {
     return this.hashedPassword
   });
 
 
 UserSchema.methods.comparePasswords = async (password): Promise<boolean> => {
-  return await compare(password, this.hashedPassword)
+  console.log('-------', password, this.hashedPassword)
+  return await compareSync(password, this.hashedPassword)
 };
 
 export { UserSchema }

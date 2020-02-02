@@ -12,6 +12,8 @@ export interface User {
   secondname?: string;
   email: string;
   password?: string;
+  hashedPassword?: string,
+  comparePasswords(password: string): boolean
 }
 
 export interface LoginData {
