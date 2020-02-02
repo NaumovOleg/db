@@ -3,16 +3,20 @@ import { Model, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from '../../interfaces/user'
 import { RpcException } from '@nestjs/microservices';
-
+import { JwtModule, JwtService } from '@nestjs/jwt';
 @Injectable()
 export class UserService {
-    constructor(@InjectModel('User') private readonly userModel: Model<User>) { }
+    constructor(
+        @InjectModel('User') private readonly userModel: Model<User>,
+        private readonly jwt: JwtService
+
+    ) { }
     public getAllUSers(): number {
         return this.userModel.find({})
     }
 
     public login({ email, password }) {
-        console.log(email, password)
+        console.log(this.jwt)
         return { token: 'dcmofrjcnrjkcjkr' }
     }
 

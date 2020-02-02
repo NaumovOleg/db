@@ -7,8 +7,8 @@ export class UserController {
 
   constructor(private userService: UserService) { }
 
-  @Post('user')
   @UseGuards(AuthGuard('jwt'))
+  @Post('user')
   createUser(@Body() user: any) {
     return this.userService.createUser(user);
   }
