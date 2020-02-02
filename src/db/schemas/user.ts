@@ -19,9 +19,7 @@ const UserSchema = new Schema({
 
 UserSchema.virtual('password')
   .set(async function (password) {
-    let hashed = hashSync(password, 10);
-    console.log('hashed', hashed)
-    this.hashedPassword = hashed;
+    this.hashedPassword = hashSync(password, 10);
   }).get(function () {
     return this.hashedPassword
   });

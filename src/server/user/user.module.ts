@@ -5,7 +5,7 @@ import { UserService } from './user.service'
 import { UserSchema } from '../../db/schemas/user';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule, JwtService } from '@nestjs/jwt';
-import { UserDb } from '../db.queries/user'
+import { UserDb } from '../../db/db.queries/user'
 
 @Module({
   imports: [

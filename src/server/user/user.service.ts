@@ -4,7 +4,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { User } from '../../interfaces/user'
 import { RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
-import { UserDb } from '../db.queries/user'
+import { UserDb } from '../../db/db.queries/user'
 @Injectable()
 export class UserService {
     constructor(
