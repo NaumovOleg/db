@@ -13,6 +13,7 @@ const statuses = {
 export class ExceptionFiltering implements RpcExceptionFilter<RpcException> {
 
   catch(error: Error | RpcException | MongoError, host: ArgumentsHost) {
+    console.log(error)
     let response = host.switchToHttp().getResponse();
     let request = host.switchToHttp().getRequest();
     let status = error.status || statuses[error.code] || 500;

@@ -14,13 +14,13 @@ export class UserController {
   }
 
   @Get('user/:id')
+  @UseGuards(AuthGuard('jwt'))
   async getUser(@Param('id') id: any, @Req() req: any) {
     return this.userService.getUser(id);
   }
 
   @Post('/login')
   async login(@Body('email') email: string, @Body('password') password: string, ) {
-    console.log('fvvnj4rnfvjt4rtbhj')
     return this.userService.login({ email, password });
   }
 }

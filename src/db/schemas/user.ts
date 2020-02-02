@@ -19,16 +19,15 @@ const UserSchema = new Schema({
 
 UserSchema.virtual('password')
   .set(async function (password) {
-    let hashed = await hashSync(password, 10)
+    let hashed = hashSync(password, 10);
+    console.log('hashed', hashed)
     this.hashedPassword = hashed;
   }).get(function () {
     return this.hashedPassword
   });
 
-
-UserSchema.methods.comparePasswords = async (password): Promise<boolean> => {
-  console.log('-------', password, this.hashedPassword)
-  return await compareSync(password, this.hashedPassword)
+UserSchema.methods.comparePasswords = async function (password): Promise<boolean> {
+  return compareSync(password, this.hashedPassword)
 };
 
 export { UserSchema }

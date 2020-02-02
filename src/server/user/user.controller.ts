@@ -17,9 +17,7 @@ export class UserController {
 
   @GrpcMethod('UserController', 'login')
   async login(loginData: LoginData, metadata: any): Promise<any> {
-    let resp = this.userService.login(loginData)
-    console.log('cmrjncjrkrj', resp)
-    return resp
+    return this.userService.login(loginData)
   }
 
   @GrpcMethod('UserController', 'getUser')

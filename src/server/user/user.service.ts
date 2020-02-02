@@ -19,9 +19,23 @@ export class UserService {
 
     public async login({ email, password }) {
         console.log(email, password);
-        let user = await this.userQuery.getUser(email);
-        console.log(user.hashedPassword)
-        return { token: 'dcmofrjcnrjkcjkr' }
+        try {
+            let user = await this.userQuery.getUser(email);
+            if (!user || !await user.comparePasswords(password)) {
+                throw new HttpException("Unauthorized", 404)
+            }
+            let token = await this.jwt.signAsync({
+                name: user.name,
+                email: user.email,
+                surname: user.surname,
+                secondname: user.secondname
+            })
+            return { token }
+
+        } catch (err) {
+            throw new RpcException({ message: err.message, code: err.status })
+        }
+
     }
 
     public async createUser(user: User): Promise<User> {
