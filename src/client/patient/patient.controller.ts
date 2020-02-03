@@ -1,13 +1,17 @@
-import { Controller, Req, Param, Post, Get, Body, UseGuards } from '@nestjs/common';
+import { Controller, Req, Param, Post, Get, Body, UseGuards, SetMetadata } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { PatientService } from './patient.service'
+import { RolesGuard } from '../roles.guard'
+
+// export const Roles = (...roles: string[]) => SetMetadata('roles', roles);
 
 @Controller()
 export class PatientController {
 
   constructor(private patientService: PatientService) { }
 
-  @UseGuards(AuthGuard('jwt'))
+  @SetMetadata('roles', ['admin'])
+  @UseGuards(AuthGuard('jwt'), RolesGuard)
   @Post('patient/:id')
   async getPatient(@Param('id') id: any, @Req() req: any) {
     return { patient: this.patientService.createPatient() }

@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { RouterModule, Routes } from 'nest-router'
 import { PassportModule } from '@nestjs/passport';
-import { JwtModule, JwtService } from '@nestjs/jwt';
-
+import { JwtModule } from '@nestjs/jwt';
+import { RolesGuard } from './roles.guard'
 import { UserModule } from './user/user.module';
 import { PatientModule } from './patient/patient.module'
 
@@ -42,7 +42,7 @@ const Routers: Routes = [
     }),
   ],
   controllers: [],
-  providers: [JwtStrategy],
+  providers: [JwtStrategy, RolesGuard],
 })
 export class ClientAppModule {
 }
