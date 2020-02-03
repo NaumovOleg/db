@@ -1134,8 +1134,8 @@
         "signature": "a2b176f66f0b708241265fb3b417597c9c9d21912bbb7f5cc00d99af551c2078"
       },
       "/home/oleg/projects/dental-box/src/interfaces/user.ts": {
-        "version": "cd17c3238c777ff3ef1b13eafba288a30e2bacfcff3e5bf1f220cc1281f67f11",
-        "signature": "63d0fc23d3901d703f3f9695a2e5a8477e7d5c4eda4db5709c2cbaee1194df09"
+        "version": "b082610c75b501ef6ca9afb158593337f3ce1da0e769e221f6e4271132d201b1",
+        "signature": "ea987d06424adcc86e177e3ffef7df87b388b5bea36431e70e0367206b1d9ae6"
       },
       "/home/oleg/projects/dental-box/node_modules/@nestjs/microservices/interfaces/client-grpc.interface.d.ts": {
         "version": "192735b3685518f37991fd140b0f13f5f2e2d3ad1c0f618689f5437f8328ec1c",
@@ -1622,20 +1622,32 @@
         "signature": "d306be26f96b4bd9b279cd7da9d1355d5ce4060a2bb254489c1b95c87057eb38"
       },
       "/home/oleg/projects/dental-box/src/client/user/jwt.strategy.ts": {
-        "version": "d976cf9bc1b30ccdbae978d60a7b74854047fd81eac240ab72c5b26ce1f27701",
-        "signature": "798b50f23f3c1ec72791fdf8122973ac481a569e472ab141f58fef893dfcea79"
+        "version": "8bc257472876dddb488796f63eaa80b870be4331387a3de6caf8f25682b7bceb",
+        "signature": "b5635a627634081d9874b69b06875c86ad289ad7d34e832f515bf107c6f2b581"
       },
       "/home/oleg/projects/dental-box/src/client/user/user.service.ts": {
         "version": "18dea4bfdf88bb5a85bf973dc90fa5fef63718b57733e2c439dc5b41606be666",
         "signature": "7994a57bbf0e206485a8452916f795518fe567ba2350073ef59ccab85a6fae42"
       },
       "/home/oleg/projects/dental-box/src/client/user/user.controller.ts": {
-        "version": "f5c0593af2c684970372e0498ff5404eda4083aa7eb0eff971f4c9f3ced9da91",
+        "version": "b6a8643841a98209167be47d9b8e39324d9679f0faaf5085b1da2e0edc3b2272",
         "signature": "bffeecd914862ac07b2a2b79d8044fb9bbf4d1a96393ed2a4977558fcdf23dff"
       },
       "/home/oleg/projects/dental-box/src/client/user/user.module.ts": {
         "version": "1ddf5d196ac1f39399ef3782cd887979a7001fb1053d87ee6d0ffd029d210764",
         "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329"
+      },
+      "/home/oleg/projects/dental-box/src/client/patient/patient.service.ts": {
+        "version": "f59dae22b7fce43c920124b5f29bb2e29db06dd25fa2253444abe64846348fae",
+        "signature": "c0d546a204bbc63a2ef9100a63f64aecfb6389f212ba513279a936aff1d264aa"
+      },
+      "/home/oleg/projects/dental-box/src/client/patient/patient.controller.ts": {
+        "version": "534d0254b9bf6d792b306f2dc183816143c84674850797067ee3c93d9f8502f4",
+        "signature": "2f64fca297d559ef8fe6199ba8feb1b72671ff96fe083c8c876e330b67766e33"
+      },
+      "/home/oleg/projects/dental-box/src/client/patient/patient.module.ts": {
+        "version": "f3659239e2823631710be0b43c98384c0d6cff09373d4036f60f5b189c3cbdbc",
+        "signature": "5b3b0ef433bc9e1d7b620df64bc38fba33e10ee7a40144eb320539196fce3a07"
       },
       "/home/oleg/projects/dental-box/node_modules/nest-router/routes.interface.d.ts": {
         "version": "e7c8ae2d6612e1cc6140ac37866ea9078ec7e1d41894048403192afc22848716",
@@ -1654,11 +1666,11 @@
         "signature": "edd4d3f28e7de4136249b998ea1ceb497bad839735e46843791de0672fae69bc"
       },
       "/home/oleg/projects/dental-box/src/client/routers.ts": {
-        "version": "cfa77d390404ae8a6f90fa3848d5979fe13e764e988106bd25ba9a3bd258e156",
+        "version": "1a21ef61ec41c67409bc2c9b302911d0f4360e32e686b5b62fea3d3736b68448",
         "signature": "be5cfe31821be9b9c6fba4d0e03418da4c801c23004a0d5f7dfecfb634dc6b62"
       },
       "/home/oleg/projects/dental-box/src/client/app.module.ts": {
-        "version": "3f6d00342f7a6302dcf8f050ff5569cee42677ab4dc1e3b609f07ee353b02533",
+        "version": "56bf092d6f1e0c7828a1006d19728f8e2d652474f618f1dd4585deeb7b418ca9",
         "signature": "a9e2b10b4b9387db86ce6b61e68684f57466664f3f48dae191bd0eb7fa5a4ced"
       },
       "/home/oleg/projects/dental-box/node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
@@ -1710,7 +1722,7 @@
         "signature": "a3e336f543a20394c9ad9cf453b9573e533b9b51824d6b81fd880fadbf6b2996"
       },
       "/home/oleg/projects/dental-box/src/server/user/user.service.ts": {
-        "version": "1877696c6cdeb7bc628e93c6106522dc1da7451d366b47e5fe58f5ebbb4895e2",
+        "version": "81d745ff7c91c2e2e501da763338875a48089963af4924fa4f89d702269debf2",
         "signature": "0b4e2d9f76940379d5a6e6a9aed95c3d8b35818b1ef6da953bf7d039661bf97a"
       },
       "/home/oleg/projects/dental-box/src/server/user/user.controller.ts": {
@@ -1831,11 +1843,9 @@
       "rootDir": "/home/oleg/projects/dental-box/src",
       "noImplicitAny": false,
       "incremental": true,
-      "paths": {
-        "@src/*": [
-          "./src/*"
-        ]
-      },
+      "rootDirs": [
+        "/home/oleg/projects/dental-box/src"
+      ],
       "project": "tsconfig.build.json",
       "watch": true,
       "configFilePath": "/home/oleg/projects/dental-box/tsconfig.build.json"
@@ -4333,7 +4343,6 @@
         "/home/oleg/projects/dental-box/node_modules/@types/passport-jwt/index.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@nestjs/passport/index.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts",
-        "/home/oleg/projects/dental-box/node_modules/@nestjs/jwt/index.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -4361,6 +4370,28 @@
         "/home/oleg/projects/dental-box/node_modules/@nestjs/passport/index.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@nestjs/jwt/index.d.ts",
         "/home/oleg/projects/dental-box/src/client/user/jwt.strategy.ts",
+        "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
+        "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/oleg/projects/dental-box/src/client/patient/patient.service.ts": [
+        "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts",
+        "/home/oleg/projects/dental-box/src/interfaces/user.ts",
+        "/home/oleg/projects/dental-box/node_modules/@nestjs/microservices/index.d.ts",
+        "/home/oleg/projects/dental-box/src/options.ts",
+        "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
+        "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/oleg/projects/dental-box/src/client/patient/patient.controller.ts": [
+        "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts",
+        "/home/oleg/projects/dental-box/node_modules/@nestjs/passport/index.d.ts",
+        "/home/oleg/projects/dental-box/src/client/patient/patient.service.ts",
+        "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
+        "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/oleg/projects/dental-box/src/client/patient/patient.module.ts": [
+        "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts",
+        "/home/oleg/projects/dental-box/src/client/patient/patient.controller.ts",
+        "/home/oleg/projects/dental-box/src/client/patient/patient.service.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -4394,12 +4425,14 @@
         "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts",
         "/home/oleg/projects/dental-box/src/client/logger.ts",
         "/home/oleg/projects/dental-box/src/client/user/user.module.ts",
+        "/home/oleg/projects/dental-box/src/client/patient/patient.module.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/oleg/projects/dental-box/src/client/app.module.ts": [
         "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts",
         "/home/oleg/projects/dental-box/src/client/user/user.module.ts",
+        "/home/oleg/projects/dental-box/src/client/patient/patient.module.ts",
         "/home/oleg/projects/dental-box/src/client/routers.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
@@ -4481,6 +4514,7 @@
         "/home/oleg/projects/dental-box/node_modules/@nestjs/microservices/index.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@nestjs/jwt/index.d.ts",
         "/home/oleg/projects/dental-box/src/db/db.queries/user.ts",
+        "/home/oleg/projects/dental-box/src/options.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -7135,6 +7169,12 @@
         "/home/oleg/projects/dental-box/node_modules/rxjs/index.d.ts",
         "/home/oleg/projects/dental-box/src/client/user/user.service.ts"
       ],
+      "/home/oleg/projects/dental-box/src/client/patient/patient.service.ts": [
+        "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts"
+      ],
+      "/home/oleg/projects/dental-box/src/client/patient/patient.controller.ts": [
+        "/home/oleg/projects/dental-box/src/client/patient/patient.service.ts"
+      ],
       "/home/oleg/projects/dental-box/node_modules/nest-router/routes.interface.d.ts": [
         "/home/oleg/projects/dental-box/node_modules/@nestjs/common/index.d.ts",
         "/home/oleg/projects/dental-box/node_modules/@types/node/util.d.ts",
@@ -7745,11 +7785,14 @@
       "/home/oleg/projects/dental-box/src/client/user/jwt.strategy.ts",
       "/home/oleg/projects/dental-box/src/client/user/user.service.ts",
       "/home/oleg/projects/dental-box/src/client/user/user.controller.ts",
+      "/home/oleg/projects/dental-box/src/client/user/user.module.ts",
+      "/home/oleg/projects/dental-box/src/client/patient/patient.service.ts",
+      "/home/oleg/projects/dental-box/src/client/patient/patient.controller.ts",
+      "/home/oleg/projects/dental-box/src/client/patient/patient.module.ts",
       "/home/oleg/projects/dental-box/node_modules/nest-router/routes.interface.d.ts",
       "/home/oleg/projects/dental-box/node_modules/nest-router/router.module.d.ts",
       "/home/oleg/projects/dental-box/node_modules/nest-router/index.d.ts",
       "/home/oleg/projects/dental-box/src/client/logger.ts",
-      "/home/oleg/projects/dental-box/src/client/routers.ts",
       "/home/oleg/projects/dental-box/src/client/app.module.ts",
       "/home/oleg/projects/dental-box/node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts",
       "/home/oleg/projects/dental-box/node_modules/@nestjs/mongoose/dist/common/mongoose.utils.d.ts",
@@ -7790,7 +7833,7 @@
       "/home/oleg/projects/dental-box/node_modules/@types/supertest/index.d.ts",
       "/home/oleg/projects/dental-box/node_modules/@types/yargs-parser/index.d.ts",
       "/home/oleg/projects/dental-box/node_modules/@types/yargs/index.d.ts",
-      "/home/oleg/projects/dental-box/src/client/user/user.module.ts"
+      "/home/oleg/projects/dental-box/src/client/routers.ts"
     ]
   },
   "version": "3.4.3"

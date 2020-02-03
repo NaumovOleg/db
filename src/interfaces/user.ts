@@ -13,6 +13,7 @@ export interface User {
   email: string;
   password?: string;
   hashedPassword?: string,
+  roles: string[],
   comparePasswords(password: string): boolean
 }
 

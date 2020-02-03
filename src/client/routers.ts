@@ -2,7 +2,8 @@ import { RouterModule, Routes } from 'nest-router'
 import { Module, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
 import { LoggerMiddleware } from './logger';
 
-import { UserModule } from './user/user.module'
+import { UserModule } from './user/user.module';
+import { PatientModule } from './patient/patient.module'
 
 const Routers: Routes = [
   {
@@ -11,7 +12,8 @@ const Routers: Routes = [
       {
         path: '/v1',
         children: [
-          UserModule
+          UserModule,
+          PatientModule
         ]
       }
     ],
@@ -21,7 +23,8 @@ const Routers: Routes = [
 @Module({
   imports: [
     RouterModule.forRoutes(Routers),
-    UserModule
+    UserModule,
+    PatientModule
   ],
   controllers: [],
   providers: [],

@@ -1,4 +1,4 @@
-import { Controller, Req, Param, Post, Get, All, Body, UseGuards } from '@nestjs/common';
+import { Controller, Req, Param, Post, Get, Body, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { UserService } from './user.service'
 
@@ -11,6 +11,11 @@ export class UserController {
   createUser(@Body() user: any) {
     return this.userService.createUser(user);
   }
+
+  // @Post('patient/:id')
+  // async getPatient(@Param('id') id: any, @Req() req: any) {
+  //   return { patient: 3 }
+  // }
 
   @Get('user/:id')
   @UseGuards(AuthGuard('jwt'))

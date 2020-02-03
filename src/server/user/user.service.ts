@@ -5,6 +5,7 @@ import { User } from '../../interfaces/user'
 import { RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
 import { UserDb } from '../../db/db.queries/user'
+import { userGrpcOptions } from 'src/options';
 @Injectable()
 export class UserService {
     constructor(
@@ -18,7 +19,6 @@ export class UserService {
     }
 
     public async login({ email, password }) {
-        console.log(email, password);
         try {
             let user = await this.userQuery.getUser(email);
             if (!user || !await user.comparePasswords(password)) {
@@ -28,8 +28,10 @@ export class UserService {
                 name: user.name,
                 email: user.email,
                 surname: user.surname,
-                secondname: user.secondname
+                secondname: user.secondname,
+                roles: user.roles
             })
+
             return { token }
 
         } catch (err) {
