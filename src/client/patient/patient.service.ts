@@ -12,11 +12,7 @@ export class PatientService implements OnModuleInit {
 
   private grpcService: UserGrpcService;
 
-  onModuleInit() {
-
-    console.log('kfrnjfnrjnffrnbfrbchrjbcchrvcrvhg')
-
-  }
+  onModuleInit() { }
 
   createPatient(): number {
     return 3

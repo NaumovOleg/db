@@ -12,11 +12,6 @@ export class UserController {
     return this.userService.createUser(user);
   }
 
-  // @Post('patient/:id')
-  // async getPatient(@Param('id') id: any, @Req() req: any) {
-  //   return { patient: 3 }
-  // }
-
   @Get('user/:id')
   @UseGuards(AuthGuard('jwt'))
   async getUser(@Param('id') id: any, @Req() req: any) {

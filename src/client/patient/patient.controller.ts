@@ -7,6 +7,7 @@ export class PatientController {
 
   constructor(private patientService: PatientService) { }
 
+  @UseGuards(AuthGuard('jwt'))
   @Post('patient/:id')
   async getPatient(@Param('id') id: any, @Req() req: any) {
     return { patient: this.patientService.createPatient() }
