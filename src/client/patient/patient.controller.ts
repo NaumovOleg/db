@@ -1,7 +1,7 @@
 import { Controller, Req, Param, Post, Get, Body, UseGuards, SetMetadata } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
-import { PatientService } from './patient.service'
-import { RolesGuard } from '../roles.guard'
+import { PatientService } from 'src/client/patient/patient.service'
+import { RolesGuard } from 'src/client/roles.guard'
 
 // export const Roles = (...roles: string[]) => SetMetadata('roles', roles);
 

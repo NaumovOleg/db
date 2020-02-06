@@ -1,7 +1,7 @@
 import { Injectable, HttpException, Catch } from '@nestjs/common';
 import { Model, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { User } from '../../interfaces/user'
+import { User } from 'src/interfaces/user'
 
 @Injectable()
 export class UserDb {

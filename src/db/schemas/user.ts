@@ -1,7 +1,7 @@
 
 import { Schema, Model, model } from "mongoose";
 import { hashSync, compareSync } from 'bcrypt';
-import { User } from '../../interfaces/user'
+import { User } from 'src/interfaces/user'
 
 
 const UserSchema = new Schema({

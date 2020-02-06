@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { UserController } from './user.controller';
-import { UserService } from './user.service'
-import { UserSchema } from '../../db/schemas/user';
+import { UserController } from 'src/server/user/user.controller';
+import { UserService } from 'src/server/user/user.service'
+import { UserSchema } from 'src/db/schemas/user';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule, JwtService } from '@nestjs/jwt';
-import { UserDb } from '../../db/db.queries/user'
+import { UserDb } from 'src/db/db.queries/user'
 
 @Module({
   imports: [

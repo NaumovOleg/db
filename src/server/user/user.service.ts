@@ -1,11 +1,12 @@
 import { Injectable, HttpException, Catch } from '@nestjs/common';
 import { Model, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { User } from '../../interfaces/user'
+import { User } from 'src/interfaces/user'
 import { RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
-import { UserDb } from '../../db/db.queries/user'
+import { UserDb } from 'src/db/db.queries/user'
 import { userGrpcOptions } from 'src/options';
+
 @Injectable()
 export class UserService {
     constructor(

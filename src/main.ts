@@ -1,9 +1,9 @@
 
 import { NestFactory, } from '@nestjs/core';
-import { AppModule } from './app.module'
-import { userGrpcOptions } from './options'
+import { AppModule } from 'src/app.module'
+import { userGrpcOptions } from 'src/options'
 
-import { ExceptionFiltering } from './exception.handler'
+import { ExceptionFiltering } from 'src/exception.handler'
 
 async function runApp() {
   const app = await NestFactory.create(AppModule);
